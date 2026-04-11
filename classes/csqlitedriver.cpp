@@ -55,6 +55,8 @@ bool cSqliteDriver::closeDatabase()
 
     qDebug() << qsMessage;
     TextBrowser->append(qsMessage);
+
+    return true;
 }
 
 bool cSqliteDriver::dropTable()
@@ -121,6 +123,16 @@ bool cSqliteDriver::createTable()
     TextBrowser->append(qsMessage);
 
     return x;
+}
+bool cSqliteDriver::insertRecordInstant()
+{
+    auto t1 = std::make_tuple(
+        ControlIncomingData->leAuthor->text(),
+        ControlIncomingData->leSerial->text(),
+        ControlIncomingData->leName->text()
+        );
+
+    return insertRecord(t1);
 }
 
 bool cSqliteDriver::insertRecord(std::tuple<QString, QString, QString> data)

@@ -50,6 +50,7 @@ public:
     bool dropTable();
     bool createTable();
     bool insertRecord(std::tuple<QString, QString, QString> data);
+    bool insertRecordInstant();
     bool selectAllAndShow();
     bool selectAllAndViewInTable();
     void showSelectionResult(QSqlQuery query);

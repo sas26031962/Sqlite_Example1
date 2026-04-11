@@ -13,6 +13,9 @@ class cControlIncomingData : public QObject
 public:
     //Аргументы
     QGroupBox * GroupBoxParent;
+    QLineEdit * leAuthor;
+    QLineEdit * leSerial;
+    QLineEdit * leName;
 
     //Конструкторы и деструкторы
     explicit cControlIncomingData(QGroupBox * group_box_parent, QObject *parent = 0);

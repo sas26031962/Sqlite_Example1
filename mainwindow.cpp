@@ -88,8 +88,9 @@ bool MainWindow::execActionCreateTable()
 
 bool MainWindow::execActionInsertRecord()
 {
-    auto t1 = std::make_tuple("AuthorName", "SerialName", "BookName");
-    return SqliteDriver->insertRecord(t1);
+    //auto t1 = std::make_tuple("AuthorName", "SerialName", "BookName");
+    //return SqliteDriver->insertRecord(t1);
+    return SqliteDriver->insertRecordInstant();
 }
 
 bool MainWindow::execActionSelectAll()
