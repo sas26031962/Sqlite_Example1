@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>754</width>
-    <height>300</height>
+    <height>413</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -48,6 +48,19 @@
       <width>261</width>
       <height>192</height>
      </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBoxIncoming">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>240</y>
+      <width>451</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Incoming data</string>
     </property>
    </widget>
   </widget>

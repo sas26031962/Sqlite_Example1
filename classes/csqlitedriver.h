@@ -11,7 +11,10 @@
 #include <QDebug>
 #include <QTableView>
 #include <QTextBrowser>
+#include <QGroupBox>
 #include <tuple>
+
+#include "classes/ccontrolincomingdata.h"
 
 class cSqliteDriver : public QObject
 {
@@ -24,18 +27,21 @@ class cSqliteDriver : public QObject
 
     QTableView * TableView;
     QTextBrowser * TextBrowser;
+    QGroupBox * GroupBoxIncoming;
 
 public:
+    cControlIncomingData * ControlIncomingData;
     QString qsTableName = "books";
 
     QSqlDatabase db;
-    //QSqlQuery query;
 
     //Конструкторы и деструкторы
     explicit cSqliteDriver(
             QTableView * table_view,
             QTextBrowser * text_browser,
-            QObject *parent = 0);
+            QGroupBox * group_box_incoming,
+            QObject *parent = 0
+            );
     ~cSqliteDriver();
 
     //Методы

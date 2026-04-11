@@ -3,11 +3,15 @@
 cSqliteDriver::cSqliteDriver(
         QTableView *table_view,
         QTextBrowser *text_browser,
+        QGroupBox *group_box_incoming,
         QObject *parent
         ) : QObject(parent)
 {
     TableView = table_view;
     TextBrowser = text_browser;
+    GroupBoxIncoming = group_box_incoming;
+
+    ControlIncomingData = new cControlIncomingData(GroupBoxIncoming);
 
     qDebug() << "Accessable drivers: " << QSqlDatabase::drivers();
     qDebug() << "cSqliteDriver ctor";
