@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>636</width>
+    <width>754</width>
     <height>300</height>
    </rect>
   </property>
@@ -19,8 +19,34 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>621</width>
+      <width>451</width>
       <height>221</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="labelLogCaption">
+    <property name="geometry">
+     <rect>
+      <x>474</x>
+      <y>10</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Log info</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTextBrowser" name="textBrowser">
+    <property name="geometry">
+     <rect>
+      <x>470</x>
+      <y>40</y>
+      <width>261</width>
+      <height>192</height>
      </rect>
     </property>
    </widget>
@@ -30,8 +56,8 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>636</width>
-     <height>21</height>
+     <width>754</width>
+     <height>26</height>
     </rect>
    </property>
   </widget>

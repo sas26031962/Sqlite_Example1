@@ -10,6 +10,7 @@
 #include <QString>
 #include <QDebug>
 #include <QTableView>
+#include <QTextBrowser>
 #include <tuple>
 
 class cSqliteDriver : public QObject
@@ -22,6 +23,7 @@ class cSqliteDriver : public QObject
     QString qsDatabaseName = "audiobooks.db";
 
     QTableView * TableView;
+    QTextBrowser * TextBrowser;
 
 public:
     QString qsTableName = "books";
@@ -30,7 +32,10 @@ public:
     //QSqlQuery query;
 
     //Конструкторы и деструкторы
-    explicit cSqliteDriver(QTableView * table_view, QObject *parent = 0);
+    explicit cSqliteDriver(
+            QTableView * table_view,
+            QTextBrowser * text_browser,
+            QObject *parent = 0);
     ~cSqliteDriver();
 
     //Методы

@@ -1,8 +1,13 @@
 #include "csqlitedriver.h"
 
-cSqliteDriver::cSqliteDriver(QTableView *table_view, QObject *parent) : QObject(parent)
+cSqliteDriver::cSqliteDriver(
+        QTableView *table_view,
+        QTextBrowser *text_browser,
+        QObject *parent
+        ) : QObject(parent)
 {
     TableView = table_view;
+    TextBrowser = text_browser;
 
     qDebug() << "Accessable drivers: " << QSqlDatabase::drivers();
     qDebug() << "cSqliteDriver ctor";

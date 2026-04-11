@@ -7,7 +7,7 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    SqliteDriver = new cSqliteDriver(ui->tableView);
+    SqliteDriver = new cSqliteDriver(ui->tableView, ui->textBrowser);
 
     QPushButton * pbOpenDatabase = new QPushButton("Open");
     pbOpenDatabase->setCursor(Qt::PointingHandCursor);
