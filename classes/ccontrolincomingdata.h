@@ -5,6 +5,7 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QGroupBox>
+#include <QGridLayout>
 
 class cControlIncomingData : public QObject
 {
