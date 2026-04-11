@@ -1,0 +1,10 @@
+
+programm/debug/csqlitedriver.o
+
+*.o
+
+programm/debug/moc_csqlitedriver.cpp
+
+programm/debug/moc_mainwindow.cpp
+
+programm/ui_mainwindow.h
