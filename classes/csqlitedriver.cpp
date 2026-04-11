@@ -38,6 +38,7 @@ bool cSqliteDriver::openDatabase()
         qsMessage += db.lastError().text();
     }
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }
@@ -47,7 +48,9 @@ bool cSqliteDriver::closeDatabase()
     db.close();
     qsMessage = qsName;
     qsMessage += " > Connection close.";
+
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 }
 
 bool cSqliteDriver::dropTable()
@@ -73,6 +76,7 @@ bool cSqliteDriver::dropTable()
         qsMessage += query.lastError().text();
     }
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }
@@ -110,6 +114,7 @@ bool cSqliteDriver::createTable()
     }
 
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }
@@ -160,6 +165,7 @@ bool cSqliteDriver::insertRecord(std::tuple<QString, QString, QString> data)
     }
 
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }
@@ -192,6 +198,7 @@ bool cSqliteDriver::selectAllAndShow()
     }
 
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }
@@ -246,6 +253,7 @@ bool cSqliteDriver::selectAllAndViewInTable()
     }
 
     qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
 
     return x;
 }

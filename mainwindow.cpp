@@ -96,5 +96,6 @@ bool MainWindow::execActionSelectAll()
 
 bool MainWindow::execActionCloseDatabase()
 {
-    return SqliteDriver->closeDatabase();
+    SqliteDriver->closeDatabase();
+    return true;
 }
