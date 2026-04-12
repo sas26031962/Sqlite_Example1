@@ -53,6 +53,14 @@ MainWindow::MainWindow(QWidget *parent) :
     });
     ui->statusBar->addWidget(pbSelectAll);
 
+    QPushButton * pbExecSqlRequest = new QPushButton("Exec SQL");
+    pbExecSqlRequest->setCursor(Qt::PointingHandCursor);
+    connect(pbExecSqlRequest, static_cast<void(QPushButton::*)()>(&QPushButton::pressed),this, [this](){
+        qDebug() << "PushButton 'ExecSqlRequest' click";
+        if(!execActionExecSqlRequest()) close();
+    });
+    ui->statusBar->addWidget(pbExecSqlRequest);
+
     QPushButton * pbCloseDatabase = new QPushButton("Close");
     pbCloseDatabase->setCursor(Qt::PointingHandCursor);
     connect(pbCloseDatabase, static_cast<void(QPushButton::*)()>(&QPushButton::pressed),this, [this](){
@@ -102,5 +110,11 @@ bool MainWindow::execActionSelectAll()
 bool MainWindow::execActionCloseDatabase()
 {
     SqliteDriver->closeDatabase();
+    return true;
+}
+
+bool MainWindow::execActionExecSqlRequest()
+{
+    qDebug() << "execActionExecSqlRequest";
     return true;
 }
