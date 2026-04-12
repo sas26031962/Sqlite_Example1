@@ -25,6 +25,12 @@ class cSqliteDriver : public QObject
     QString qsName = "SqliteDriver";
     QString qsMessage;
     QString qsDatabaseName = "audiobooks.db";
+    QString qsTableName = "books";
+    QSqlDatabase db;
+    cControlIncomingData * ControlIncomingData;
+
+    //Легальные SQL запросы
+    QString qsRequestGetRecordNumber = "SELECT COUNT(*) FROM books";
 
     QTableView * TableView;
     QTextBrowser * TextBrowser;
@@ -32,10 +38,7 @@ class cSqliteDriver : public QObject
     QLineEdit * leSqlRequest;
 
 public:
-    cControlIncomingData * ControlIncomingData;
-    QString qsTableName = "books";
 
-    QSqlDatabase db;
 
     //Конструкторы и деструкторы
     explicit cSqliteDriver(
