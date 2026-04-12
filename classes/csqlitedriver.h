@@ -12,6 +12,7 @@
 #include <QTableView>
 #include <QTextBrowser>
 #include <QGroupBox>
+#include <QLineEdit>
 #include <tuple>
 
 #include "classes/ccontrolincomingdata.h"
@@ -28,6 +29,7 @@ class cSqliteDriver : public QObject
     QTableView * TableView;
     QTextBrowser * TextBrowser;
     QGroupBox * GroupBoxIncoming;
+    QLineEdit * leSqlRequest;
 
 public:
     cControlIncomingData * ControlIncomingData;
@@ -40,6 +42,7 @@ public:
             QTableView * table_view,
             QTextBrowser * text_browser,
             QGroupBox * group_box_incoming,
+            QLineEdit * sql_request,
             QObject *parent = 0
             );
     ~cSqliteDriver();
@@ -53,6 +56,7 @@ public:
     bool insertRecordInstant();
     bool selectAllAndShow();
     bool selectAllAndViewInTable();
+    bool execSqlRequest();
     void showSelectionResult(QSqlQuery query);
 
 signals:

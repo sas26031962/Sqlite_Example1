@@ -4,12 +4,14 @@ cSqliteDriver::cSqliteDriver(
         QTableView *table_view,
         QTextBrowser *text_browser,
         QGroupBox *group_box_incoming,
+        QLineEdit *sql_request,
         QObject *parent
         ) : QObject(parent)
 {
     TableView = table_view;
     TextBrowser = text_browser;
     GroupBoxIncoming = group_box_incoming;
+    leSqlRequest = sql_request;
 
     ControlIncomingData = new cControlIncomingData(GroupBoxIncoming);
 
@@ -287,3 +289,43 @@ void cSqliteDriver::showSelectionResult(QSqlQuery query)
     }
 }
 
+bool cSqliteDriver::execSqlRequest()
+{
+    QString qsSelectData = leSqlRequest->text();
+
+    QSqlQueryModel * model = new QSqlQueryModel();
+
+    bool x;
+
+    model->setQuery(qsSelectData);
+    if (model->lastError().isValid())
+    {
+        qCritical() << model->lastError().text();
+        x = false;
+    }
+    else
+    {
+        x = true;
+        TableView->setModel(model);
+        TableView->show();
+    }
+    qsMessage = qsName;
+    qsMessage += " > Select data from the table ";
+    qsMessage += qsTableName;
+    qsMessage += ": Data select";
+
+    if (x)
+    {
+        qsMessage += " success!";
+    }
+    else
+    {
+        qsMessage +=  " error:";
+        qsMessage += model->lastError().text();
+    }
+
+    qDebug() << qsMessage;
+    TextBrowser->append(qsMessage);
+
+    return x;
+}

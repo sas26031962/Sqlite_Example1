@@ -10,7 +10,8 @@ MainWindow::MainWindow(QWidget *parent) :
     SqliteDriver = new cSqliteDriver(
         ui->tableView,
         ui->textBrowser,
-        ui->groupBoxIncoming
+        ui->groupBoxIncoming,
+        ui->lineEditSqlRequest
         );
 
     QPushButton * pbOpenDatabase = new QPushButton("Open");
@@ -115,6 +116,6 @@ bool MainWindow::execActionCloseDatabase()
 
 bool MainWindow::execActionExecSqlRequest()
 {
-    qDebug() << "execActionExecSqlRequest";
-    return true;
+    //qDebug() << "execActionExecSqlRequest";
+    return SqliteDriver->execSqlRequest();
 }
