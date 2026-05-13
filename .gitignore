@@ -9,4 +9,22 @@ programm/debug/moc_mainwindow.cpp
 
 programm/ui_mainwindow.h
 
+programm/debug/moc_ccontrolincoming.cpp
+
+programm/debug/qrc_resource.cpp
+
+programm/debug/moc_cclickablelabel.cpp
+
+programm/object_script.Sqlite_Example0.Release
+
+programm/object_script.Sqlite_Example0.Debug
+
+programm/debug/moc_cexternaldata.cpp
+
+programm/data/!ExternalText.txt
+
 programm/debug/moc_ccontrolincomingdata.cpp
+
+programm/object_script.Sqlite_Example1.Debug
+
+programm/object_script.Sqlite_Example1.Release

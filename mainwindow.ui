@@ -6,12 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>754</width>
-    <height>432</height>
+    <width>831</width>
+    <height>474</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Sqlite_Example1</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QTableView" name="tableView">
@@ -19,7 +19,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>451</width>
+      <width>811</width>
       <height>221</height>
      </rect>
     </property>
@@ -27,26 +27,26 @@
    <widget class="QLabel" name="labelLogCaption">
     <property name="geometry">
      <rect>
-      <x>474</x>
-      <y>10</y>
-      <width>261</width>
+      <x>640</x>
+      <y>290</y>
+      <width>181</width>
       <height>21</height>
      </rect>
     </property>
     <property name="text">
-     <string>Log info</string>
+     <string>Log</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QTextBrowser" name="textBrowser">
+   <widget class="QTextBrowser" name="textBrowserLog">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>40</y>
-      <width>261</width>
-      <height>321</height>
+      <x>640</x>
+      <y>320</y>
+      <width>181</width>
+      <height>91</height>
      </rect>
     </property>
    </widget>
@@ -54,36 +54,36 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>240</y>
-      <width>451</width>
-      <height>91</height>
+      <y>280</y>
+      <width>621</width>
+      <height>101</height>
      </rect>
     </property>
     <property name="title">
      <string>Incoming data</string>
     </property>
    </widget>
-   <widget class="QLabel" name="labelSqlRequestCaption">
+   <widget class="QComboBox" name="comboBoxHistory">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>340</y>
-      <width>25</width>
+      <y>390</y>
+      <width>621</width>
       <height>22</height>
      </rect>
-    </property>
-    <property name="text">
-     <string>SQL</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEditSqlRequest">
+   <widget class="QGroupBox" name="groupBoxExternalData">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>340</y>
-      <width>411</width>
-      <height>22</height>
+      <x>9</x>
+      <y>230</y>
+      <width>811</width>
+      <height>51</height>
      </rect>
+    </property>
+    <property name="title">
+     <string>ExternalData</string>
     </property>
    </widget>
   </widget>
@@ -92,10 +92,29 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>754</width>
-     <height>26</height>
+     <width>831</width>
+     <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuActions">
+    <property name="title">
+     <string>Actions</string>
+    </property>
+    <addaction name="actionOpen"/>
+    <addaction name="actionDropTable"/>
+    <addaction name="actionCreateTable"/>
+    <addaction name="actionClose"/>
+    <addaction name="actionGetAuthorList"/>
+    <addaction name="actionCheckRecordInclusion"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuActions"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
@@ -106,6 +125,41 @@
    </attribute>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionGetAuthorList">
+   <property name="text">
+    <string>GetAuthorList</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+  <action name="actionDropTable">
+   <property name="text">
+    <string>Drop Table</string>
+   </property>
+  </action>
+  <action name="actionCreateTable">
+   <property name="text">
+    <string>Create Table</string>
+   </property>
+  </action>
+  <action name="actionClose">
+   <property name="text">
+    <string>Close</string>
+   </property>
+  </action>
+  <action name="actionCheckRecordInclusion">
+   <property name="text">
+    <string>CheckRecordInclusion</string>
+   </property>
+  </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>

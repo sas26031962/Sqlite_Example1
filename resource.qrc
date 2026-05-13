@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/TXT">
+        <file>programm/SQL memo.txt</file>
+        <file>programm/TODO.txt</file>
+    </qresource>
+</RCC>

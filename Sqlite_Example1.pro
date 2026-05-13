@@ -16,10 +16,21 @@ TEMPLATE = app
 SOURCES += main.cpp\
         mainwindow.cpp \
     classes/csqlitedriver.cpp \
-    classes/ccontrolincomingdata.cpp
+    classes/ccontrolincoming.cpp \
+    classes/cclickablelabel.cpp \
+    classes/cloadfiles.cpp \
+    classes/cexternaldata.cpp
 
 HEADERS  += mainwindow.h \
     classes/csqlitedriver.h \
-    classes/ccontrolincomingdata.h
+    classes/ccontrolincoming.h \
+    classes/cclickablelabel.h \
+    classes/cloadfiles.h \
+    classes/cexternaldata.h
 
 FORMS    += mainwindow.ui
+
+win32 {
+    RC_FILE += file.rc
+    OTHER_FILES += file.rc
+}

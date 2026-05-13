@@ -8,14 +8,20 @@
 #include <QSqlQueryModel>
 #include <QSqlRecord>
 #include <QString>
+#include <QStringList>
 #include <QDebug>
 #include <QTableView>
+#include <QModelIndex>
 #include <QTextBrowser>
 #include <QGroupBox>
-#include <QLineEdit>
+#include <QHeaderView>
+#include <QAbstractItemModel>
+#include <QComboBox>
+
 #include <tuple>
 
-#include "classes/ccontrolincomingdata.h"
+#include "classes/ccontrolincoming.h"
+#include "classes/cloadfiles.h"
 
 class cSqliteDriver : public QObject
 {
@@ -24,30 +30,34 @@ class cSqliteDriver : public QObject
     //Атрибуты
     QString qsName = "SqliteDriver";
     QString qsMessage;
-    QString qsDatabaseName = "audiobooks.db";
-    QString qsTableName = "books";
-    QSqlDatabase db;
-    cControlIncomingData * ControlIncomingData;
-
-    //Легальные SQL запросы
-    QString qsRequestGetRecordNumber = "SELECT COUNT(*) FROM books";
+    QString qsRequestsFileName = "/data/SQL_Requests.txt";
+    QString qsAuthorsFileName = "/data/Authors.txt";
+    QStringList qslRequests;
+    QStringList qslAuthors;
 
     QTableView * TableView;
-    QTextBrowser * TextBrowser;
-    QGroupBox * GroupBoxIncoming;
-    QLineEdit * leSqlRequest;
+    QTextBrowser* tbLog;
+    QGroupBox * gbIncoming;
+    cControlIncoming * ControlIncoming;
+    QComboBox * cbHistory;
+    QHeaderView * VerticalHeader;
+    QHeaderView * HorizontalHeader;
+
+    QSqlDatabase db;//База данных
+    QString qsDatabaseName = "/data/audiobooks.db";//Имя базы данных
+    QString qsTableName = "books";//Имя таблицы базы данных
+
+    QString qsAuthor = "";
+    QString qsSerial = "";
+    QString qsVolume = "";
+    QString qsBook = "";
+    int iIncludionCount = 0;
 
 public:
-
+    static QString qsApplicationPath;
 
     //Конструкторы и деструкторы
-    explicit cSqliteDriver(
-            QTableView * table_view,
-            QTextBrowser * text_browser,
-            QGroupBox * group_box_incoming,
-            QLineEdit * sql_request,
-            QObject *parent = 0
-            );
+    explicit cSqliteDriver(QTableView * table_view, QTextBrowser* text_browser_log, QGroupBox * groub_box_incoming, QComboBox * history, QObject *parent = 0);
     ~cSqliteDriver();
 
     //Методы
@@ -55,16 +65,32 @@ public:
     bool closeDatabase();
     bool dropTable();
     bool createTable();
-    bool insertRecord(std::tuple<QString, QString, QString> data);
-    bool insertRecordInstant();
+    bool insertRecord(std::tuple<QString, QString, QString, QString> data);
     bool selectAllAndShow();
     bool selectAllAndViewInTable();
-    bool execSqlRequest();
+    bool execRequest();
     void showSelectionResult(QSqlQuery query);
+    QString getAuthor();
+    QString getSerial();
+    QString getVolume();
+    QString getName();
+    bool setAuthor();
+    bool setSerial();
+    bool setVolume();
+    bool setName();
+    bool storeRequestHistory();
+    bool storeAuthorsList();
+    bool getAuthorList();
+    bool checkDataIncludion();
 
 signals:
 
 public slots:
+    void onTableViewClicked(const QModelIndex &index);
+    void onTableViewActivated(int logical_row);
+    void onHistoryIndexChanged(int index);
+    void showMessage(QString s);
+    void execSetDataString(QString s);
 };
 
 #endif // CSQLITEDRIVER_H

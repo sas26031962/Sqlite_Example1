@@ -1,0 +1,435 @@
+SELECT COUNT (*) FROM books;
+DELETE FROM books WHERE id=1;
+DELETE FROM books WHERE id IN (10, 14, 45);
+SELECT * FROM books WHERE serial = '';
+SELECT id, author, serial, name FROM books
+SELECT * FROM books WHERE name LIKE '%офёр%'
+SELECT * FROM books WHERE name LIKE '%визор%'
+SELECT * FROM books WHERE serial LIKE '%ронт%'
+SELECT author, serial, name FROM books WHERE serial LIKE '%ронт%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Глау%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Любенко%'
+SELECT author, serial, name FROM books WHERE serial LIKE '%Драгун%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Мария%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Лирик%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Сухов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Мопассан%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Перумов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Гурова%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Головачёв%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Злотников%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Ардашев%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Шляхов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Южин%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Орловский%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Винтеркей%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Семёнова%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Тамоников%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Михайловский%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Бушков%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Гегель%'
+SELECT * FROM books WHERE name LIKE '%колдун%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Тихонов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Большаков%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Корчевский%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Градов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Орлов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Ланцов Михаил%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Эльтеррус%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Вадим Панов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Панов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Джеффри%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Волчек%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Прозоров%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Винтеркей%' AND serial LIKE  '%Эгида%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Шульце%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Коул%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Лондон%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Константин%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Ланцов%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Сапковский%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Сотник%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев Кир%'
+SELECT author FROM books WHERE author LIKE '%Большаков%'
+SELECT author FROM books;
+SELECT id, author FROM books;
+UPDATE books SET author = 'Март Артём' WHERE id = 33;
+SELECT author, serial, name FROM books WHERE author LIKE '%Артём%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Артём%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев Ан%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев К%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Булычев Кир%'
+UPDATE books SET author = 'Можейко Игорь, Булычев Кир' WHERE id = 247;
+UPDATE books SET author = 'Можейко Игорь, Булычев Кир' WHERE id = 248;
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев А%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев А%' AND serial LIKE '%Дра%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев К%' 
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев А%' 
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев А%' AND serial LIKE '%Еге%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев А%' AND serial LIKE '%Сотник%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Булычев К%'
+DELETE FROM books WHERE id=255;
+SELECT author, serial, name FROM books WHERE author LIKE '%Тамоников%'  AND serial LIKE '%Честь%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Тамоников%'  AND serial LIKE '%%'
+SELECT author, serial, name from books WHERE author = Тамоников Александр AND serial = Честь имею AND name = В плену у талибов;
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр'' AND serial = 'Честь имею'' AND name = 'В плену у талибов'';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Честь имею' AND name = 'В плену у талибов';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Фронтовая разведка 41-го' AND name = '(Группа Глеба Шубина). В пасти «тигра»';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Честь имею' AND name = 'Базовый прорыв';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Шпионский маршрут';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Горячее эхо песков';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Президентский спецназ: новый Афган' AND name = 'Ангелы сирийского неба';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Батальон мужества' AND name = 'Афганские сны';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны. Последний шторм войны';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Бой после победы';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'След у таежной реки';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Фронтовая разведка 41-го' AND name = '(Группа Глеба Шубина). Погоня за генералом';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Волынская мадонна';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Александр Тимохин' AND name = 'Мститель';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Фронтовая разведка 41-го' AND name = '(Группа Глеба Шубина). Тень немецких крыльев';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ- спецназ Сталина' AND name = 'Фашистское жало';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ- спецназ Сталина' AND name = 'Те, кто выжил';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ- спецназ Сталина' AND name = 'Грозовые ворота';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ- спецназ Сталина' AND name = 'Спецназ Берии: Человек в прицеле';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Темное полушарие';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны. Ночной убийца';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Ночь чужих туманов';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Ложь на крови';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Прятки для взрослых';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны. Тайник абвера';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Фронтовая разведка 41-го' AND name = '(Группа Глеба Шубина) Их было десять';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Тени за городом';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Спецназ КГБ, Заморский тайник';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Чужое зверье';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны. Контрольная схватка';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Бомба за пазухой';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Схватка вслепую';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Спецназ КГБ, Закат команданте';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Закат команданте';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Пражский фугас';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Волевой порог';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Ядерная тень';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны, Вирус ненависти';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Фронтовая разведка 41-го' AND name = '(Группа Глеба Шубина), Тайный бункер абвера';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Крик болотной птицы';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ КГБ' AND name = 'Смертельный маскарад';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Берии' AND name = 'Герои секретной войны, Леший в погонах';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Башни немецкого замка';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Альпийский узел';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Жаль, не добили';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Палач из Галиции';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Тайна затонувшего конвоя';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Архив смертников';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Секретный концлагерь';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'СМЕРШ - спецназ Сталина' AND name = 'Призрак со свастикой';
+SELECT author, serial, name from books WHERE author = 'Тамоников Александр' AND serial = 'Спецназ Группа "Антитеррор"' AND name = 'Бандеровский эшелон';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Тени в темных углах' AND name = 'Гроза над крышами';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Тени в темных углах' AND name = 'Рельсы под луной';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Тени в темных углах' AND name = 'Тайны Старой Москвы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Из пламени и дыма.';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Тайны Старой Москвы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Рельсы под луной';
+SELECT * FROM books WHERE name LIKE '%тени%'
+SELECT * FROM books 
+DELETE FROM books WHERE id=251
+DELETE FROM books WHERE id=351
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Злые чудеса (рассказы)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Цвет твоей крови';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Пляски с волками';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Чудовища в янтаре-2. Улица моя тесна';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Чудовища в янтаре. Дыхание мороза';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Радиант';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Слепые солдаты';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Над самой клеткой льва';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Алый, как снег';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Вертикальная вода';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Изобличитель: кровь, золото, собака';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Струна времени. Военные истории';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Царица темной реки';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непознанное' AND name = 'Майор и волшебница';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Остров кошмаров' AND name = 'Копья и пулеметы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Остров кошмаров' AND name = 'Томагавки и алмазы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Остров кошмаров' AND name = 'Корона и плаха';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Как три мушкетёра (Из архива Пираньи)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Голая королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Принцесса на алмазах';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Белая гвардия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Тайны Петербурга, или Узники музейных подвалов';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Тайны Смутного времени';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр – Русский Шерлок Холмс' AND serial = 'Пиранья' AND name = 'шков Александр – Русский Шерлок Холмс';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Лесная легенда';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Кто в России не ворует, или Два сына императора Павла';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Крым и крымчане';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Дверь в чужую осень';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Остров кошмаров' AND name = 'Паруса и пушки';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Остров кошмаров' AND name = 'Топоры и стрелы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Анастасия' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Анастасия' AND name = 'Петербург и петербуржцы, или Парадиз Петра I';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Анастасия' AND name = 'Русский Ротшильд, или Хорошие были господа';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Чистый углерод. Алмазный спецназ-2';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Ближе, бандерлоги!';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр – Мамонты. А.С. Секретная миссия' AND serial = 'шков Александр – Мамонты' AND name = 'А.С. Секретная миссия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'шков Александр – Мамонты' AND name = 'Тайны Сибири, или Зачем Россия ее завоевала';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'шков Александр – Мамонты' AND name = 'Сыщик, ищи вора! Или самые знаменитые разбойники России';
+DELETE FROM books WHERE id IN (385, 386, 387);
+SELECT * FROM books;
+UPDATE books SET serial = "" WHERE Id = 371
+SELECT *  FROM books WHERE Id > 300
+UPDATE books SET serial = "" WHERE Id IN (372, 373, 374, 375, 376, 377)
+SELECT * FROM books WHERE Id > 372;
+UPDATE books SET serial = "" WHERE Id IN (380, 381, 382)
+UPDATE books SET name = 'Анастасия' WHERE Id = 380;
+DELETE FROM books WHERE id=389
+SELECT author, serial, name from books WHERE author = 'РђР»РµРєСЃР°РЅРґСЂ Р‘СѓС€РєРѕРІ' AND serial = '' AND name = 'РћС…РѕС‚Р° РЅР° РїРёСЂР°РЅСЊСЋ';
+SELECT author, serial, name from books WHERE author = 'Р‘СѓС€РєРѕРІ РђР»РµРєСЃР°РЅРґСЂ' AND serial = '' AND name = 'РћР±РѕСЂРѕС‚РЅРё РІ СЌРїРѕР»РµС‚Р°С…, РёР»Рё РЎРёСЏС‚РµР»СЊРЅРѕРµ РІРѕСЂСЊРµ';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Оборотни в эполетах, или Сиятельное ворье';
+SELECT author, serial, name from books WHERE author = 'Александр Бушков' AND serial = '' AND name = 'Охота на пиранью';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Пусть меня научат! Или как преподавали на Руси';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Охота на пиранью';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Загадочный Петербург, или Призраки европейских столиц';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Врач, гусар, мушкетер, или Летопись медицинской жизни России';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Сибирь и сибиряки, или Русские конкистадоры';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Врач, гусар, мушкетёр, или Летопись медицинской жизни России';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Дождь над океаном' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Волчья стая' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Танец Бешеной' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Стервятник' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты-3' AND name = 'А.С. Секретная миссия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Бульдожья схватка' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ-04' AND name = 'Под созвездием северных "Крестов"';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ-03' AND name = 'Сходняк';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ-02' AND name = 'Ашхабадский вор';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ-01' AND name = 'Тайга и зона';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Нелетная погода' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог (11 книг)' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья (16 книг)' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты-5' AND name = 'Чернокнижники';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты 4' AND name = 'Стражи';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты-2' AND name = 'Завороженные';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты-1' AND name = 'Золотой Демон';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = '- Чертова мельница. Книга 13';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Чертова мельница. Книга 13';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 2' AND name = 'Дикое золото';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 1' AND name = 'Непристойный танец';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = ' Приключения Алексея Бестужева' AND name = 'Дикое золото Книга 2';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Непристойный танец Книга 1';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 5' AND name = 'Аргонавт';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Аргонавт Книга 5';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 4' AND name = 'Комбатант';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Комбатант Книга 4';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 3' AND name = 'Сыщик';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Сыщик Книга 3';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева 6' AND name = 'Ковбой';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Ковбой Книга 6';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Непристойный танец' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Приключения Алексея Бестужева' AND name = 'Непристойный танец';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог 12 книг' AND name = '1 Рыцарь из ниоткуда, 2 Летающие острова, 3 Нечаянный король, 4 Железные паруса, 5 По ту сторону льда и т.д.';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Неизвестная война' AND name = 'Тайная история США';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Неизвестная война' AND name = 'Антиквар';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Самый далёкий берег' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Самый далёкий берег';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Анастасия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Дождь над океаном';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Волчья стая';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Танец Бешеной';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Стервятник';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Бульдожья схватка';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Под созвездием северных "Крестов" Книга-04';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Сходняк Книга-0';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Ашхабадский вор Книга-0';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Ашхабадский вор Книга-02';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Тайга и зона-01';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Алексей Карташ' AND name = 'Тайга и зона Книга-01';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Нелетная погода';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = '(11 книг)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = '(16 книг)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты' AND name = 'Чернокнижники Книга-5';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты' AND name = 'Стражи Книга 4';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты' AND name = 'Завороженные Книга-2';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Мамонты' AND name = 'Золотой Демон Книга-1';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Непристойный танец';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Антиквар';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сокровище антиквара' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Сокровище антиквара';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Кодекс наемника';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Кодекс наёмника';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'НКВД война с неведомым';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Антиквар' AND name = 'Антиквар';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Антиквар' AND name = 'Последняя Пасха';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Кодекс одиночки';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Пиранья против воров';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Пиранья' AND name = 'Пиранья против воров';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'А' AND name = '. Секретная миссия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'АС Секретная миссия';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Бешеная';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Спаситель Короны';
+SELECT author, serial, name from books WHERE author = 'Александр Бушков' AND serial = '' AND name = 'На то и волки (в двух книгах)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Д`Артаньян - гвардеец кардинала, книги 1-2';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сталин' AND name = 'Схватка у штурвала';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Сталин  Схватка у штурвала';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Анастасия' AND name = 'Повести и рассказы';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр, Андрей Буровский' AND serial = 'Секретный сибирские материалы' AND name = 'Сибирская жуть (7 томов)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Волчье солнышко';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Охота на пиранью (Аудиокнига)';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Охота на пиранью' AND name = '(Аудиокнига)';
+ALTER TABLE books ADD COLUMN volume TEXT DEFAULT ''
+SELECT author, serial, name from books WHERE author = 'Бушков Александр';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND name LIKE '%Чудовища%';
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Чудовища%';
+UPDATE books SET volume= '21' WHERE id = 357;
+UPDATE books SET volume= '22' WHERE id = 356;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Радиан%';
+UPDATE books SET volume= '20' WHERE id = 358;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Слепы%';
+UPDATE books SET volume= '14' WHERE id = 359;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Над самой%';
+UPDATE books SET volume= '19' WHERE id = 360;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Алый%';
+UPDATE books SET volume= '18' WHERE id = 361;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Вертикальная%';
+UPDATE books SET volume= '17' WHERE id = 362;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Копья%';
+UPDATE books SET volume= '05' WHERE id = 153;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Томагавки%';
+UPDATE books SET volume= '04' WHERE id = 154;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Корона%';
+UPDATE books SET volume= '03' WHERE id = 161;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Как три%';
+UPDATE books SET volume= '22' WHERE id = 367;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Голая%';
+UPDATE books SET volume= '03' WHERE id = 368;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Принцесса%';
+UPDATE books SET volume= '02' WHERE id = 369;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Белая гв%';
+UPDATE books SET volume= '01' WHERE id = 370;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Паруса и пушки%';
+UPDATE books SET volume= '02' WHERE id = 378;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Топоры%';
+UPDATE books SET volume= '01' WHERE id = 379;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Чистый угл%';
+UPDATE books SET volume= '20' WHERE id = 383;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Ближе%';
+UPDATE books SET volume= '11' WHERE id = 384;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Секретная м%';
+UPDATE books SET volume= '3' WHERE id = 388;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Крестов%';
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Северных%';
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND name LIKE '%Книга-04%';
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр'';
+SELECT *FROM books WHERE author = 'Бушков Александр'';
+SELECT * FROM books WHERE author = 'Бушков Александр'';
+SELECT * FROM books WHERE author LIKE '%Бушков%' AND name LIKE '%Анастасия%'
+SELECT * FROM books WHERE author LIKE '%Бушков%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Любенко%' AND serial LIKE '%Двойник%'
+SELECT author, serial, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Двойник%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Двойник%'
+SELECT * FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Двойник%'';
+UPDATE books SET volume= '04' WHERE id = 22;
+SELECT id, author, serial, name, volume FROM books WHERE id = 22;
+SELECT author, serial, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Драгун%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Драгун%'
+UPDATE books SET volume = '3' WHERE id = 23;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Драгун%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Март%' AND serial LIKE '%Пограничник%'
+UPDATE books SET volume = '6' WHERE id = 27;
+UPDATE books SET volume = '5' WHERE id = 33;
+UPDATE books SET volume = '4' WHERE id = 36;
+UPDATE books SET volume = '3' WHERE id = 38;
+UPDATE books SET volume = '2' WHERE id = 40;
+UPDATE books SET volume = '1' WHERE id = 46;
+UPDATE books SET volume = '6' WHERE id = 28;
+UPDATE books SET volume = '5' WHERE id = 35;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Егерь%'
+UPDATE books SET volume = '14' WHERE id = 43;
+UPDATE books SET volume = '13' WHERE id = 48;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Двойник%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%В тени%'
+UPDATE books SET volume = '05' WHERE id = 47;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Иванов%' AND name LIKE '%Начало%'
+UPDATE books SET volume = '01' WHERE id = 41;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Иванов%' AND name LIKE '%Разви%'
+UPDATE books SET volume = '02' WHERE id = 42;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Иванов%' AND name LIKE '%Раз%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Лирик%' AND name LIKE '%Дар%'
+UPDATE books SET volume = '2' WHERE id = 126;
+UPDATE books SET volume = '12' WHERE id = 54;
+UPDATE books SET volume = '11' WHERE id = 55;
+UPDATE books SET volume = '10' WHERE id = 56;
+UPDATE books SET volume = '9' WHERE id = 57;
+SELECT author, serial, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Арагац%'
+SELECT author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Арагац%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Арагац%'
+UPDATE books SET volume = '03' WHERE id = 62;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Лирик%' AND name LIKE '%Наслед%'
+UPDATE books SET volume = '2' WHERE id = 49;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Сот%'
+UPDATE books SET volume = '8' WHERE id = 52;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Афанасьев%' AND serial LIKE '%Под%'
+UPDATE books SET volume = '1' WHERE id = 73;
+UPDATE books SET volume = '2' WHERE id = 74;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND serial LIKE '%Начало%'
+UPDATE books SET volume = '02' WHERE id = 88;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Булычев%' AND serial LIKE '%Драг%'
+UPDATE books SET volume = '1' WHERE id = 90;
+UPDATE books SET volume = '2' WHERE id = 91;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Гурова А%' AND serial LIKE '%Аратта%'
+SELECTauthor, serial, volume, name FROM books WHERE author LIKE '%Гурова А%' AND serial LIKE '%Аратта%'
+SELECT author, serial, volume, name FROM books WHERE author LIKE '%Гурова А%' AND serial LIKE '%Аратта%'
+UPDATE books SET volume = '7' WHERE id = 392;
+UPDATE books SET volume = '6' WHERE id = 107;
+SELECT author, serial, volume, name FROM books WHERE author LIKE '%Злотников Роман%' AND serial LIKE '%Настоящее прошлое%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Злотников Роман%' AND serial LIKE '%Настоящее прошлое%'
+UPDATE books SET volume = '4' WHERE id = 94;
+UPDATE books SET volume = '3' WHERE id = 111;
+SELECT author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND serial LIKE '%Начало%'
+UPDATE books SET volume = '01' WHERE id = 393;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Лирик%' AND name LIKE '%Хран%'
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Лирик%' AND name LIKE '%Инк%'
+UPDATE books SET volume = '1' WHERE id = 98;
+SELECT id, author, serial, name, volume FROM books WHERE author = 'Бушков Александр' AND serial LIKE '%Сварог%';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Дверь в чужую осень';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'НКВД' AND name = 'Война с неведомым';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'НКВД  Война с неведомым';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND name = 'Сварог 16, Король и его королева';
+UPDATE books SET volume = '16' WHERE id = 400;
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND name = 'Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Александр Бушков' AND serial = 'volume = '' AND name = 'Охота на пиранью';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Пусть меня научат! Или как преподавали на Руси';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Загадочный Петербург, или Призраки европейских столиц';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Врач, гусар, мушкетер, или Летопись медицинской жизни России';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Сибирь и сибиряки, или Русские конкистадоры';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Дверь в чужую осень';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'НКВД  Война с неведомым';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Оборотни в эполетах, или Сиятельное ворье';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварогvolume = '' AND name = 'Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'volume = '' AND name = 'Сварог 15, Из ниоткуда в никуда';
+SELECT author, serial, name from books WHERE author = 'Александр Бушков' AND serial = '' AND volume = '' AND name = 'Охота на пиранью';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Пусть меня научат! Или как преподавали на Руси';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Загадочный Петербург, или Призраки европейских столиц';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Врач, гусар, мушкетер, или Летопись медицинской жизни России';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Сибирь и сибиряки, или Русские конкистадоры';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Дверь в чужую осень';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'НКВД  Война с неведомым';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '' AND name = 'Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Сварог 15, Из ниоткуда в никуда';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Сварог 16  Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Дом с привидениями' AND volume = '' AND name = 'Хроника мутного времени';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Лабиринт' AND volume = '' AND name = '';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '#1' AND name = '6  Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '16' AND name = '  Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '16' AND name = '6  Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '16' AND name = ' Король и его королева';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог';
+SELECT author, serial, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '15' AND name = 'Из ниоткуда в никуда';
+SELECT author, serial, volume, name from books WHERE author = 'Александр Бушков' AND serial = '' AND volume = '' AND name = 'Охота на пиранью';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Пусть меня научат! Или как преподавали на Руси';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Загадочный Петербург, или Призраки европейских столиц';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Врач, гусар, мушкетер, или Летопись медицинской жизни России';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Сибирь и сибиряки, или Русские конкистадоры';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'Дверь в чужую осень';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = '' AND volume = '' AND name = 'НКВД  Война с неведомым';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '16' AND name = 'Король и его королева';
+SELECT author, serial, volume, name from books WHERE author = 'Бушков Александр' AND serial = 'Сварог' AND volume = '15' AND name = 'Из ниоткуда в никуда';

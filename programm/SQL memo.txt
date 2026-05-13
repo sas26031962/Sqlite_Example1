@@ -1,0 +1,21 @@
+-- Получить число записей в таблице books
+SELECT COUNT (*) FROM books;
+
+-- Удалить запись с id=1 из таблицы books
+DELETE FROM books WHERE id=1;
+
+--- Удалить серию записей с id, которые входят в состав списка из таблицы books
+DELETE FROM books WHERE id IN (10, 14, 45);
+
+-- Поиск строк с пустыми значениями
+SELECT * FROM books WHERE serial IS NULL;
+SELECT * FROM books WHERE serial = '';
+
+-- Выбор строк в таблице
+SELECT id, author, serial, name FROM books
+
+-- Получить список полей в таблице
+SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'books' AND TABLE_SCHEMA = 'audiobooks'
+
+-- Получить список записей, где совпадает часть поля
+SELECT * FROM books WHERE name LIKE '%офёр%'
