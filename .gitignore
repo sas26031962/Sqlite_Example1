@@ -23,8 +23,6 @@ programm/debug/moc_cexternaldata.cpp
 
 programm/data/!ExternalText.txt
 
-programm/debug/moc_ccontrolincomingdata.cpp
-
 programm/object_script.Sqlite_Example1.Debug
 
 programm/object_script.Sqlite_Example1.Release
