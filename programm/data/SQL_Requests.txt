@@ -735,3 +735,29 @@ SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим
 SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '02' AND name = 'Серый монах (сборник)';
 SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '09' AND name = 'Тень Азраила';
 SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '08' AND name = 'Лик над пропастью';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '' AND name = '09 Тень Азраила';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '06' AND name = 'Убийство на водах';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '07' AND name = 'Черная магнолия';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '02' AND name = 'Тайна персидского обоза';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '03' AND name = 'Кровь на палубе';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '10' AND name = 'Киевский лабиринт';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '09' AND name = 'Супостат';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '01' AND name = 'Маскарад со смертью';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '05' AND name = 'Кровь на палубе';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '04' AND name = 'Убийство на водах';
+SELECT author, serial, volume, name from books WHERE author = 'Любенко Иван Клим Ардашев' AND serial = 'Том' AND volume = '04' AND name = 'Тайна персидского обоза';
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Убий%'
+DELETE FROM books WHERE id=508;
+DELETE FROM books WHERE id=522;
+DELETE FROM books WHERE id=535;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%';
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Двойник%' 
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%пирамид%' 
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Арагац%' 
+DELETE FROM books WHERE id=506;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%поводырь%' 
+DELETE FROM books WHERE id=507;
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%' AND name LIKE '%Душегуб%' 
+DELETE FROM books WHERE id=509;
+DELETE FROM books WHERE id=512;
+DELETE FROM books WHERE id=516;
