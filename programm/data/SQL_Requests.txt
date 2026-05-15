@@ -761,3 +761,13 @@ SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Любенко%'
 DELETE FROM books WHERE id=509;
 DELETE FROM books WHERE id=512;
 DELETE FROM books WHERE id=516;
+SELECT author, serial, volume, name from books WHERE author = 'Тихонов Михаил' AND serial = 'Невернувшийся' AND volume = '05' AND name = 'Дорогами мертвых';
+SELECT author, serial, volume, name from books WHERE author = 'Тихонов Михаил' AND serial = 'Невернувшийся' AND volume = '03' AND name = 'Прыжок над бездной';
+SELECT author, serial, volume, name from books WHERE author = 'Тихонов Михаил' AND serial = 'Невернувшийся' AND volume = '04' AND name = 'На темной стороне';
+SELECT author, serial, volume, name from books WHERE author = 'Тихонов Михаил' AND serial = 'Невернувшийся' AND volume = '02' AND name = 'В объятиях холодных звезд';
+SELECT author, serial, volume, name from books WHERE author = 'Тихонов Михаил' AND serial = 'Невернувшийся' AND volume = '01' AND name = 'Там, за горизонтом...';
+SELECT id, author, serial, volume, name FROM books WHERE author LIKE '%Тихонов%';
+DELETE FROM books WHERE id=173;
+DELETE FROM books WHERE id=174;
+DELETE FROM books WHERE id=182;
+DELETE FROM books WHERE id=190;
