@@ -533,3 +533,7 @@ SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AN
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Безумие бардов' AND volume = '02' AND name = ' Безумие бардов';
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Росская Империя' AND volume = '02' AND name = ' Возвращение императора';
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Росская Империя' AND volume = '01' AND name = ' Белый крейсер';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '04' AND name = 'Гнев императора: Незванные гости';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '03' AND name = 'Навстречу судьбе';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '02' AND name = 'Скрытое пророчество';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '01' AND name = 'Тропой мастеров';
