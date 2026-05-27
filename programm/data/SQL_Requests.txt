@@ -525,3 +525,11 @@ SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AN
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = '' AND volume = '' AND name = 'Первый звонок';
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '02' AND name = ' Бремя императора: Скрытое пророчество';
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '03' AND name = ' Бремя императора. Навстречу судьбе';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = '' AND volume = '' AND name = 'Отзвуки серебряного ветра 8, Раскрой свои крылья';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '06' AND name = ' Гнев императора: Дорога домой';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '05' AND name = ' Гнев императора: Дальний путь';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '03' AND name = ' Бремя императора: Навстречу судьбе';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Элианская империя' AND volume = '01' AND name = ' Бремя императора: Тропой мастеров';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Безумие бардов' AND volume = '02' AND name = ' Безумие бардов';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Росская Империя' AND volume = '02' AND name = ' Возвращение императора';
+SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Росская Империя' AND volume = '01' AND name = ' Белый крейсер';
