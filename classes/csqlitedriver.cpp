@@ -594,7 +594,7 @@ void cSqliteDriver::execSetDataString(QString s)
 
 bool cSqliteDriver::checkDataIncludion()
 {
-    QString qsExecRequest = "SELECT author, serial, volume, name from ";
+    QString qsExecRequest = "SELECT id, author, serial, volume, name from ";
     qsExecRequest += qsTableName;
     qsExecRequest += " WHERE ";
     qsExecRequest += "author";
