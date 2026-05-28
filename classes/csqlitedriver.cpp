@@ -205,7 +205,7 @@ bool cSqliteDriver::selectAllAndViewInTable()
 {
     QString qsSelectData = "";
     qsSelectData += "SELECT ";//id, author, serial, volume, name FROM ";
-    //qsSelectData += "id, ";
+    qsSelectData += "id, ";
     qsSelectData += "author, ";
     qsSelectData += "serial, ";
     qsSelectData += "volume, ";
@@ -352,6 +352,9 @@ QString cSqliteDriver::getName()
     return ControlIncoming->getName();
 }
 
+//
+// Обработчик клика по полю объекта tableView
+//
 void cSqliteDriver::onTableViewClicked(const QModelIndex &index)
 {
     QString Message = "TableViewClicked > ";
@@ -372,18 +375,23 @@ void cSqliteDriver::onTableViewClicked(const QModelIndex &index)
         switch(col)
         {
             case 0:
-                ControlIncoming->setAuthor(data);
+            Message += "Row id:";
+            Message += data;
             break;
 
             case 1:
-                ControlIncoming->setSerial(data);
+                ControlIncoming->setAuthor(data);
             break;
 
             case 2:
-                ControlIncoming->setVolume(data);
+                ControlIncoming->setSerial(data);
             break;
 
             case 3:
+                ControlIncoming->setVolume(data);
+            break;
+
+            case 4:
                 ControlIncoming->setName(data);
             break;
 
@@ -400,6 +408,9 @@ void cSqliteDriver::onTableViewClicked(const QModelIndex &index)
     showMessage(qsMessage);
 }
 
+//
+// Обработчик клика по объекту VerticalHeader объекта tableView
+//
 void cSqliteDriver::onTableViewActivated(int logical_row)
 {
     //qDebug() << "TableViewActivated" << logical_row;
@@ -411,11 +422,15 @@ void cSqliteDriver::onTableViewActivated(int logical_row)
         // Например, читаем ID из первого столбца
         QModelIndex idIndex = model->index(logical_row, 0);
         int id = model->data(idIndex).toInt();
-
-        QString author = model->data(model->index(logical_row, 0)).toString();
-        QString serial = model->data(model->index(logical_row, 1)).toString();
-        QString volume = model->data(model->index(logical_row, 2)).toString();
-        QString name = model->data(model->index(logical_row, 3)).toString();
+        int LogicalRowIndex = 0;
+        LogicalRowIndex++;//Пропускаем поле id
+        QString author = model->data(model->index(logical_row, LogicalRowIndex)).toString();
+        LogicalRowIndex++;
+        QString serial = model->data(model->index(logical_row, LogicalRowIndex)).toString();
+        LogicalRowIndex++;
+        QString volume = model->data(model->index(logical_row, LogicalRowIndex)).toString();
+        LogicalRowIndex++;
+        QString name = model->data(model->index(logical_row, LogicalRowIndex)).toString();
 
         qDebug() << "Выбрана запись> " << id << " Author:" << author << " Serial: " << serial << " Volume: " << volume << " Name:" << name;
 
