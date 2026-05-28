@@ -201,69 +201,44 @@ bool cSqliteDriver::insertRecord(std::tuple<QString, QString, QString, QString> 
     return x;
 }
 
-bool cSqliteDriver::selectAllAndShow()
-{
-    QString qsSelectData = "";
-    qsSelectData += "SELECT id, author, serial, name FROM ";
-    qsSelectData += qsTableName;
-    qsSelectData += ";";
-
-    QSqlQuery query;
-
-    bool x = query.exec(qsSelectData);
-
-    qsMessage = qsName;
-    qsMessage += " > Select data from the table ";
-    qsMessage += qsTableName;
-    qsMessage += ": Data select";
-    if (x)
-    {
-        qsMessage += " success!";
-        //---
-        showSelectionResult(query);
-        //---
-    }
-    else
-    {
-        qsMessage +=  " error:";
-        qsMessage += query.lastError().text();
-    }
-
-    qDebug() << qsMessage;
-    showMessage(qsMessage);
-
-    return x;
-}
-
 bool cSqliteDriver::selectAllAndViewInTable()
 {
     QString qsSelectData = "";
-    qsSelectData += "SELECT author, serial, volume, name FROM ";
+    qsSelectData += "SELECT ";//id, author, serial, volume, name FROM ";
+    //qsSelectData += "id, ";
+    qsSelectData += "author, ";
+    qsSelectData += "serial, ";
+    qsSelectData += "volume, ";
+    qsSelectData += "name ";
+    qsSelectData += "FROM ";
     qsSelectData += qsTableName;
 
     QSqlQueryModel * model = new QSqlQueryModel();
 
     bool x;
+    QString qsLastError = "";
 
     model->setQuery(qsSelectData);
     if (model->lastError().isValid())
     {
-        qCritical() << model->lastError().text();
+        qsLastError += model->lastError().text();
+        qCritical() << qsLastError;
         x = false;
     }
     else
     {
         x = true;
-        qDebug() << "SelectAllAndViewInTable > Model rows count=" << model->rowCount();
-        for (int row = 0; row < model->rowCount(); ++row)
-        {
-            QSqlRecord record = model->record(row);
-            QString qsAuthor = record.value("author").toString();
-            QString qsSerial = record.value("serial").toString();
-            QString qsVolume = record.value("volume").toString();
-            QString qsBook = record.value("name").toString();
-            qDebug() << qsAuthor << qsSerial << qsVolume << qsBook;
-        }
+
+//        qDebug() << "SqliteDriver > Model rows count=" << model->rowCount();
+//        for (int row = 0; row < model->rowCount(); ++row)
+//        {
+//            QSqlRecord record = model->record(row);
+//            QString qsAuthor = record.value("author").toString();
+//            QString qsSerial = record.value("serial").toString();
+//            QString qsVolume = record.value("volume").toString();
+//            QString qsBook = record.value("name").toString();
+//            qDebug() << qsAuthor << qsSerial << qsVolume << qsBook;
+//        }
 
         TableView->setModel(model);
         TableView->show();
@@ -271,18 +246,16 @@ bool cSqliteDriver::selectAllAndViewInTable()
     qsMessage = qsName;
     qsMessage += " > Select data from the table ";
     qsMessage += qsTableName;
-    qsMessage += ": Data select";
+    qsMessage += ": Data select ";
     if (x)
     {
-        qsMessage += " success!";
-        //---
-        //showSelectionResult(query);
-        //---
+        qsMessage += QString::number(model->rowCount());
+        qsMessage += " records success!";
     }
     else
     {
-        qsMessage +=  " error:";
-        //qsMessage += query.lastError().text();
+        qsMessage +=  "error:";
+        qsMessage += qsLastError;
     }
 
     qDebug() << qsMessage;

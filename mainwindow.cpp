@@ -227,7 +227,6 @@ bool MainWindow::execActionInsertRecord()
 
 bool MainWindow::execActionSelectAll()
 {
-    //return SqliteDriver->selectAllAndShow();
     return SqliteDriver->selectAllAndViewInTable();
 }
 
