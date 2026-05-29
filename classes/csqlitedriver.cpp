@@ -301,10 +301,11 @@ bool cSqliteDriver::execRequest()
     qsMessage = qsName;
     qsMessage += " > Select data from the table ";
     qsMessage += qsTableName;
-    qsMessage += ": Data select";
+    qsMessage += ": Data select ";
     if (x)
     {
-        qsMessage += " success!";
+        qsMessage += QString::number(model->rowCount());
+        qsMessage += " records success!";
     }
     else
     {
@@ -594,38 +595,38 @@ void cSqliteDriver::execSetDataString(QString s)
 
 bool cSqliteDriver::checkDataIncludion()
 {
-    QString qsExecRequest = "SELECT id, author, serial, volume, name from ";
-    qsExecRequest += qsTableName;
-    qsExecRequest += " WHERE ";
-    qsExecRequest += "author";
-    qsExecRequest += " = '";
-    qsExecRequest += qsAuthor;
-    qsExecRequest += "' AND ";
-    qsExecRequest += "serial";
-    qsExecRequest += " = '";
-    qsExecRequest += qsSerial;
-    qsExecRequest += "' AND ";
-    qsExecRequest += "volume";
-    qsExecRequest += " = '";
-    qsExecRequest += qsVolume;
-    qsExecRequest += "' AND ";
-    qsExecRequest += "name";
-    qsExecRequest += " = '";
-    qsExecRequest += qsBook;
-    qsExecRequest += "';";
+    QString qsRequest = "SELECT id, author, serial, volume, name from ";
+    qsRequest += qsTableName;
+    qsRequest += " WHERE ";
+    qsRequest += "author";
+    qsRequest += " = '";
+    qsRequest += qsAuthor;
+    qsRequest += "' AND ";
+    qsRequest += "serial";
+    qsRequest += " = '";
+    qsRequest += qsSerial;
+    qsRequest += "' AND ";
+    qsRequest += "volume";
+    qsRequest += " = '";
+    qsRequest += qsVolume;
+    qsRequest += "' AND ";
+    qsRequest += "name";
+    qsRequest += " = '";
+    qsRequest += qsBook;
+    qsRequest += "';";
 
-    qDebug() << "CheckDataInclusion: request = " << qsExecRequest;
+    qDebug() << "CheckDataInclusion: request = " << qsRequest;
 
     qsMessage = qsName;
-    if(qslRequests.contains(qsExecRequest))
+    if(qslRequests.contains(qsRequest))
     {
         qsMessage += " > contains this request";
     }
     else
     {
-        qslRequests.append(qsExecRequest);
+        qslRequests.append(qsRequest);
         qsMessage += " > append this request";
-        cbHistory->addItem(qsExecRequest);
+        cbHistory->addItem(qsRequest);
     }
     qDebug() << qsMessage;
     showMessage(qsMessage);
@@ -634,7 +635,7 @@ bool cSqliteDriver::checkDataIncludion()
 
     bool x;
 
-    model->setQuery(qsExecRequest);
+    model->setQuery(qsRequest);
     if (model->lastError().isValid())
     {
         qCritical() << model->lastError().text();

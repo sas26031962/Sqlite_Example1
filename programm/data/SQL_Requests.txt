@@ -538,3 +538,25 @@ SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AN
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '02' AND name = 'Скрытое пророчество';
 SELECT author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '01' AND name = 'Тропой мастеров';
 SELECT id, author, serial, volume, name from books WHERE author = 'Эльтеррус Иар' AND serial = 'Бремя императора' AND volume = '04' AND name = 'Гнев императора: Незванные гости';
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Вера%'
+DELETE FROM books WHERE id=202;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%легион%'
+DELETE FROM books WHERE id=197;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Переход%'
+DELETE FROM books WHERE id=625;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Выбор%'
+DELETE FROM books WHERE id=199;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Осознание%'
+DELETE FROM books WHERE id=200;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Честь%'
+DELETE FROM books WHERE id=203;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Путь%'
+DELETE FROM books WHERE id=204;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Призыв%'
+DELETE FROM books WHERE id=205;
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Завет%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%Предопределение%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%Отзвуки%' AND name LIKE '%суть%'
+SELECT id, author, serial, name FROM books WHERE author LIKE '%Иар%' AND serial LIKE '%крылья%'
